@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cast Imaging - Image Processing & Manipulation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(86, 78, 208);
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: rgb(86, 78, 208);
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid rgb(86, 78, 208);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #444;
+            font-size: 1.5em;
+            margin: 25px 0 15px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            color: white;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card h3 {
+            color: white;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1em;
+        }
+
+        .capabilities {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin: 15px 0;
+        }
+
+        li {
+            padding: 8px 0;
+            font-size: 1.05em;
+            color: #555;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .highlight h2 {
+            color: white;
+            border-bottom: 3px solid white;
+            margin-bottom: 20px;
+        }
+
+        .highlight p {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cast Imaging</h1>
+            <p class="subtitle">Advanced Image Processing & Manipulation Solutions</p>
+        </header>
+
+        <div class="content">
+            <h2>About Cast Imaging</h2>
+            <p>
+                Cast Imaging provides comprehensive tools for image processing, editing, and manipulation. 
+                Our solutions are designed for opening, saving, transforming, filtering, and analyzing 
+                image files in many formats, making it an essential platform for developers and designers 
+                working with digital imagery.
+            </p>
+            <p>
+                Built on the foundation of Python Imaging Libraries, Cast Imaging represents a powerful 
+                suite of services for business logic and data processing in the realm of visual content 
+                management.
+            </p>
+        </div>
+
+        <div class="content">
+            <h2>Core Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🖼️ Image Processing</h3>
+                    <p>Advanced algorithms for processing images with high quality and performance.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✏️ Image Editing</h3>
+                    <p>Comprehensive tools for editing and enhancing your images with precision.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔄 Format Conversion</h3>
+                    <p>Support for opening, saving, and converting multiple image file formats.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎨 Image Transformation</h3>
+                    <p>Transform images with rotation, scaling, cropping, and other operations.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔍 Image Analysis</h3>
+                    <p>Analyze image properties, metadata, and content for various applications.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Filtering</h3>
+                    <p>Apply sophisticated filters to enhance and modify image appearance.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Capabilities</h2>
+            <div class="capabilities">
+                <h3>Image Manipulation Operations</h3>
+                <ul>
+                    <li>Opening and reading image files in various formats (JPEG, PNG, GIF, BMP, TIFF, and more)</li>
+                    <li>Saving and exporting images in different formats with quality control</li>
+                    <li>Resizing and scaling images while maintaining aspect ratio</li>
+                    <li>Rotating and flipping images with precision</li>
+                    <li>Cropping and extracting specific regions of interest</li>
+                    <li>Color space conversions (RGB, CMYK, Grayscale, etc.)</li>
+                    <li>Applying filters and effects (blur, sharpen, edge detection, etc.)</li>
+                    <li>Image enhancement (brightness, contrast, saturation adjustment)</li>
+                    <li>Overlay and compositing operations</li>
+                    <li>Text and shape drawing on images</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight">
+            <h2>Service Classification</h2>
+            <p>
+                Cast Imaging operates under <strong>Services → Logic Services → Business Logic</strong>, 
+                providing essential functionality for image processing workflows in enterprise applications.
+            </p>
+        </div>
+
+        <div class="content">
+            <h2>Use Cases</h2>
+            <h3>Web Applications</h3>
+            <p>
+                Process and optimize images for web delivery, create thumbnails, and manage user-uploaded content.
+            </p>
+
+            <h3>Data Analysis</h3>
+            <p>
+                Extract visual data, perform image recognition, and analyze patterns in visual datasets.
+            </p>
+
+            <h3>Media Management</h3>
+            <p>
+                Organize, convert, and optimize large collections of images for archival and distribution.
+            </p>
+
+            <h3>Automated Workflows</h3>
+            <p>
+                Integrate image processing into batch operations, automated pipelines, and scheduled tasks.
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Cast Imaging - Professional Image Processing Solutions</p>
+            <p>Part of the Logic Services Framework</p>
+        </footer>
+    </div>
+</body>
+</html>
